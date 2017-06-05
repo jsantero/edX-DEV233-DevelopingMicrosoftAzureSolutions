@@ -7,9 +7,16 @@ namespace Contoso.Events.Web.Controllers
     public class HomeController : Controller
     {
         private const int EVENTS_GRID_SIZE = 10;
-        
+
         public ActionResult Index()
         {
+            EventsViewModel viewModel = new EventsViewModel();
+
+            return View(viewModel);
+        }
+
+        public ActionResult Search()
+        { 
             EventsViewModel viewModel = new EventsViewModel();
 
             return View(viewModel);
