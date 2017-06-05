@@ -16,21 +16,7 @@
                 <i class="fa @PageData["NavbarIcon"]" aria-hidden="true"></i>
                 @PageData["Header"]
             </a>
-
-
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="http://www.nokia.com">nokia</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="http://www.google.com">google</a>
-                        </li>
-                    </ul>
-             </div>
-</nav>
+        </nav>
         <main>
             <header>
                 @RenderSection("header", required: false)
@@ -51,6 +37,9 @@
                     </li>
                     <li class="nav-item">
                         @Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "nav-link" })
+                    </li>
+                    <li class="nav-item">
+                        @Html.ActionLink("Search", "Search", "Home", new { area = "" }, new { @class = "nav-link" })
                     </li>
                     <li class="nav-item">
                         @Html.ActionLink("Admin Dashboard", "Index", "Home", new { area = "Admin" }, new { @class = "nav-link" })
