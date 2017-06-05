@@ -16,16 +16,21 @@
                 <i class="fa @PageData["NavbarIcon"]" aria-hidden="true"></i>
                 @PageData["Header"]
             </a>
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="http://www.nokia.com">nokia</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="http://www.google.com">google</a>
-                </li>
-            </ul>
 
-        </nav>
+
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="http://www.nokia.com">nokia</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="http://www.google.com">google</a>
+                        </li>
+                    </ul>
+             </div>
+</nav>
         <main>
             <header>
                 @RenderSection("header", required: false)
