@@ -6,6 +6,13 @@
 <div class="list-group">
     @foreach (Event item in Model.Events)
     {
+        <div class="jumbotron">
+            <div class="container">
+                <h1 class="display-3">Hello, world!</h1>
+                <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+                <p><a class="btn btn-primary btn-lg" role="button" href="#">Learn more »</a></p>
+            </div>
+        </div>
         <a class="list-group-item list-group-item-action" href="@Url.Action("Event", new { id = item.EventKey })">
             <h5 class="list-group-item-heading">
                 @item.Title
