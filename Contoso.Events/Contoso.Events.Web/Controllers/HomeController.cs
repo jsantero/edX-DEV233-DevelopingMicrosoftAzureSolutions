@@ -29,7 +29,7 @@ namespace Contoso.Events.Web.Controllers
             {
                 searchTerm = "*";
             }
-            string url = $"https://aa-events-prod-search.search.windows.net/indexes/aa-events-index/docs?search={searchTerm}&api-version=2016-09-01";
+            string url = $"https://hack.search.windows.net/indexes/temp/docs?api-version=2016-09-01&search={searchTerm}";
 
             var req = new HttpRequestMessage(HttpMethod.Get, url);
             string accessKey = ConfigurationManager.AppSettings["SearchAccessKey"];
