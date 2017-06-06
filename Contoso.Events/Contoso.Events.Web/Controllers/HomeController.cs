@@ -4,7 +4,6 @@ using System.Web.Mvc;
 
 namespace Contoso.Events.Web.Controllers
 {
-    [Authorize]
     public class HomeController : Controller
     {
         private const int EVENTS_GRID_SIZE = 10;
