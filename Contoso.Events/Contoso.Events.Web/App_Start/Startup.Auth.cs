@@ -30,7 +30,7 @@ namespace Contoso.Events.Web
 
         public void ConfigureAuth(IAppBuilder app)
         {
-            ApplicationDbContext db = new ApplicationDbContext();
+            //ApplicationDbContext db = new ApplicationDbContext();
 
             app.SetDefaultSignInAsAuthenticationType(CookieAuthenticationDefaults.AuthenticationType);
 
@@ -43,20 +43,20 @@ namespace Contoso.Events.Web
                     Authority = Authority,
                     PostLogoutRedirectUri = postLogoutRedirectUri,
 
-                    Notifications = new OpenIdConnectAuthenticationNotifications()
-                    {
-                        // If there is a code in the OpenID Connect response, redeem it for an access token and refresh token, and store those away.
-                        AuthorizationCodeReceived = async (context) =>
-                        {
-                            var code = context.Code;
-                            ClientCredential credential = new ClientCredential(clientId, appKey);
-                            string signedInUserID = context.AuthenticationTicket.Identity.FindFirst(ClaimTypes.NameIdentifier).Value;
-                            AuthenticationContext authContext = new AuthenticationContext(Authority, new ADALTokenCache(signedInUserID));
-                            AuthenticationResult result = await authContext.AcquireTokenByAuthorizationCodeAsync(
-                            code, new Uri(HttpContext.Current.Request.Url.GetLeftPart(UriPartial.Path)), credential, graphResourceId);
+                    //Notifications = new OpenIdConnectAuthenticationNotifications()
+                    //{
+                    //    // If there is a code in the OpenID Connect response, redeem it for an access token and refresh token, and store those away.
+                    //    AuthorizationCodeReceived = async (context) =>
+                    //    {
+                    //        var code = context.Code;
+                    //        ClientCredential credential = new ClientCredential(clientId, appKey);
+                    //        string signedInUserID = context.AuthenticationTicket.Identity.FindFirst(ClaimTypes.NameIdentifier).Value;
+                    //        AuthenticationContext authContext = new AuthenticationContext(Authority, new ADALTokenCache(signedInUserID));
+                    //        AuthenticationResult result = await authContext.AcquireTokenByAuthorizationCodeAsync(
+                    //        code, new Uri(HttpContext.Current.Request.Url.GetLeftPart(UriPartial.Path)), credential, graphResourceId);
                             
-                        }
-                    }
+                    //    }
+                    //}
                 });
         }
     }
