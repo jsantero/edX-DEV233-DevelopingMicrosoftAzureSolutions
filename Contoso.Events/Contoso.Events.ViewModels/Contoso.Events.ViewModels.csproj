@@ -90,6 +90,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SearchViewModel.cs" />
     <Compile Include="DownloadViewModel.cs" />
     <Compile Include="RegisterViewModel.cs" />
     <Compile Include="EventViewModel.cs" />
