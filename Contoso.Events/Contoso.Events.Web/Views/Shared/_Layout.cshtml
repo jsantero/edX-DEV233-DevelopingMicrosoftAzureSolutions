@@ -11,15 +11,12 @@
 </head>
 <body>
     <div class="container">
-        <nav class="navbar @PageData["NavbarTheme"]">
+         <nav class="navbar @PageData["NavbarTheme"]">
             <a class="navbar-brand" href="@Url.Action("Index", "Home")">
                 <i class="fa @PageData["NavbarIcon"]" aria-hidden="true"></i>
                 @PageData["Header"]
             </a>
 
-
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
@@ -29,8 +26,8 @@
                             <a class="nav-link" href="http://www.google.com">google</a>
                         </li>
                     </ul>
-             </div>
-</nav>
+               </div>
+        </nav>
         <main>
             <header>
                 @RenderSection("header", required: false)
